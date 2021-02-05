@@ -20,6 +20,7 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 
 ## Result
 ![alt text](result/result.jpg)
+<hr>
 ![alt text](result/about.png)
 
 ## Learn More

@@ -1,0 +1,293 @@
+.about_Container {
+    main {
+        position: relative;
+        min-height: 100vh;
+        height: auto;
+        padding: 1rem;
+        background: rgb(255, 255, 255);
+        z-index: 1;
+        @media #{$desktop} {
+            
+        }  
+        .about_Article {
+            position: relative;
+            height: auto;
+            width: 77vw;
+            @media #{$l-mobile} {
+                position: relative;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+            @media #{$tablet} {
+                position: relative;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+            p {
+                font-size: 3.5vw;
+                line-height: 3.5vw;
+                @media #{$l-mobile} {
+                    margin-bottom: 0;
+                    font-size: 7.5vw;
+                    line-height: 8.5vw;
+                } 
+                @media #{$desktop} {
+                    font-size: 3.2vw;
+                    line-height: 4.8vw;
+                }            
+                span {
+                    font-family: Times, serif;
+                    font-style: italic;
+                    line-height: 3.9vw;
+                }
+            }
+            .shopbtn_Container {
+                position: sticky;
+                top: 0px;
+                height: 67px;
+                margin: 1.5rem 0px;
+                display: flex;
+                -webkit-box-align: center;
+                align-items: center;
+                -webkit-box-pack: justify;
+                justify-content: space-between;
+                background: rgb(255, 255, 255);
+                @media #{$l-mobile} {
+                    margin: 1.2rem 0px;
+                    height: 30px;
+                    position: relative;
+                }  
+                button {
+                    position: relative;
+                    height: 2.25rem;
+                    padding: 0.25rem 10vw;
+                    border-radius: 25px;
+                    border: 2px solid rgb(0, 0, 0);
+                    background: rgb(0, 0, 0);
+                    display: block;
+                    font-size: 1.75rem;
+                    line-height: 1rem;
+                    text-transform: uppercase;
+                    color: rgb(255, 255, 255);
+                    cursor: pointer;
+                    filter: drop-shadow(rgba(0, 0, 0, 0.2) 2px 3px 6px);
+                    transition: all 0.2s ease-out 0s;
+                    z-index: 2;
+                    &:hover {
+                        background: rgb(255, 255, 255);
+                        color: rgb(0, 0, 0);
+                    }                    
+                    @media #{$l-mobile} {
+                        width: 100% !important;
+                        height: 2rem !important;
+                        font-size: 14px;
+                    }  
+                    @media #{$desktop} {
+                    }                    
+                }
+                .ticker_Container_lg {
+                    position: relative;
+                    display: block;
+                    width: 100%;
+                    padding: 1rem 0px;
+                    pointer-events: none;
+                    overflow: hidden;
+                    z-index: 0;
+                    background: rgb(255, 255, 255);
+                    @media #{$l-mobile} {
+                        display: none;
+                    }
+                    p {
+                        display: inline-block;
+                        white-space: nowrap;
+                        line-height: normal;
+                        margin: 0;
+                        color: rgb(255, 0, 0);
+                        font-size: 0.875rem;
+                        will-change: transform;
+                        animation: 12s linear 0s infinite normal none running marquee;
+                        @keyframes marquee {
+                            from { transform: translateX(-50%); }
+                            to { transform: translateX(0); }
+                        }
+                        span {
+                            font-size: 0.875rem;
+                            font-style: normal;
+                            &.times {
+                                font-family: Times, serif;                            
+                                font-style: italic;
+                            }
+                        }
+                    }
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        z-index: 1;
+                        top: 0px;
+                        left: 0px;
+                        pointer-events: none;
+                        background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(255, 255, 255) 90%);
+                        height: 100%;
+                        width: 4rem;
+                    }
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        z-index: 1;
+                        top: 0px;
+                        right: 0px;
+                        pointer-events: none;
+                        background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255) 90%);
+                        height: 100%;
+                        width: 4rem;
+                    }
+                }
+                .wine_FixedContainer_lg {
+                    position: fixed;
+                    top: 0px;
+                    right: 0px;
+                    margin-top: 1rem;
+                    margin-right: 1rem;
+                    z-index: 3;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    @media #{$l-mobile} {
+                        display: none;
+                    }
+                    @media #{$tablet} {
+                        position: relative;
+                        height: auto;
+                        align-items: flex-start;
+                        -webkit-box-pack: justify;
+                        justify-content: space-between;
+                        margin: 0px;
+                    }
+                    @media #{$desktop} {                        
+                    }                    
+                    img {
+                        position: relative;
+                        width: 16.66vw;
+                        height: calc(24.4902vw);
+                        object-fit: cover;
+                        @media #{$tablet} {
+                            position: relative;
+                            height: auto;
+                            align-items: flex-start;
+                            -webkit-box-pack: justify;
+                            justify-content: space-between;
+                            margin: 0px;
+
+                            width: 48vw;
+                            height: calc(70.56vw);
+                            object-fit: cover;
+                        }
+                    }
+                    p {
+                        margin-top: 1.3vw;
+                        text-align: right;
+                        font-size: 4vh;
+                        line-height: normal;
+                        @media #{$tablet} {   
+                            position: relative;
+                            height: auto;
+                            align-items: flex-start;
+                            -webkit-box-pack: justify;
+                            justify-content: space-between;
+                            margin: 0px;
+                            margin-top: 0px;
+                            font-size: 5.5vw;
+                        }
+                        @media #{$desktop} {          
+                            font-size: 2.8vh;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // SASS for mobile screen
+    .ticker_Container_mob {
+        position: relative;
+        display: block;
+        width: 100%;
+        padding: 0.5rem 0px;
+        pointer-events: none;
+        overflow: hidden;
+        z-index: 0;
+        background: white;
+        margin-bottom: 1rem;
+        &[hidden] {
+            @media #{$l-mobile} {
+                display: block !important;
+                padding-top: 0;
+            }            
+        }        
+        p {
+            display: inline-block;
+            white-space: nowrap;
+            line-height: normal;
+            margin: 0;
+            color: rgb(255, 0, 0);
+            font-size: 0.875rem;
+            will-change: transform;
+            animation: 12s linear 0s infinite normal none running marquee;
+            @keyframes marquee {
+                from { transform: translateX(-50%); }
+                to { transform: translateX(0); }
+            }
+            span {
+                font-size: 0.875rem;
+                font-style: normal;
+                &.times {
+                    font-family: Times, serif;                            
+                    font-style: italic;
+                }
+            }
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            top: 0px;
+            left: 0px;
+            pointer-events: none;
+            background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(255, 255, 255) 90%);
+            height: 100%;
+            width: 4rem;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            top: 0px;
+            right: 0px;
+            pointer-events: none;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255) 90%);
+            height: 100%;
+            width: 4rem;
+        }
+    }
+    .wine_FixedContainer_mob {        
+        &[hidden] {
+            @media #{$l-mobile} {
+                display: block !important;
+                margin-bottom: 1.5rem;
+            }            
+        } 
+        img {
+            position: relative;
+            width: 40.66vw;
+            height: calc(40.4902vw);
+            object-fit: cover;
+        }
+        p {
+            margin-top: 1.3vw;
+            text-align: right;
+            font-size: 3vh !important;
+            line-height: 6.8vw !important;        
+        }
+    }
+}

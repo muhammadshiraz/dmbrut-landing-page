@@ -46,8 +46,14 @@
             width: 10rem;
             height: 10rem;
         }
+        &:focus {
+            background-color: transparent;
+            border-color: transparent;
+            box-shadow: none;
+        }
         svg {
             position: absolute;
+            color: #212529;
             right: 0px;
             bottom: 0px;
             width: 3rem;
